@@ -1,0 +1,671 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Printf is providing free printouts to the student of Amity University
+    Patna. Get high-quality printouts delivered to your doorsteps in no time!">
+    <meta name="robots" content="index, archive">
+
+    <title>Print F</title>
+    <link rel="icon" href="{% static '../static/images/iconss.png' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("iu6zjJ-GHdJ7-qZY_");
+        })();
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-3">
+        <div class="container">
+            <a class="navbar-brand lead" href="{% url 'home' %}"><img class="img-fluid logo"
+                    src="{% static '../static/images/h.png' %}" alt="" srcset=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link active links " aria-current="page" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link active links" aria-current="page" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active links" aria-current="page" href="#story">Our Story</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active links" aria-current="page" href="#register">Register</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active links" aria-current="page" href="#contact">Contact Us</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <script>
+        let navBar = document.querySelectorAll('.nav-link')
+        let navCollapse = document.querySelector('.navbar-collapse.collapse')
+        navBar.forEach(function (a) {
+            a.addEventListener('click', function () {
+                navCollapse.classList.remove("show")
+            })
+        })
+    </script>
+
+
+    <!-- SHOWCASE -->
+    <section class="bg-dark text-light p-5 text-center text-sm-start" id="Home">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h1>Get Free <span class="text-warning"> Printouts </span></h1>
+                    <p class="lead my-4 para1">Printf is providing free printouts to the student of Amity University
+                        Patna. Get high-quality printouts delivered to your doorsteps in no time!
+                    </p>
+                    <a href="#register"><button class="btn btn-primary btn-lg">Print Now </button> </a>
+                </div>
+                <img class="img-fluid w-50 col-5 ms-auto d-none d-sm-block px-2"
+                    src="{% static '../static/images/undraw_printing_invoices_-5-r4r.svg' %}" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Boxes -->
+    <section class="p-5" id="service">
+        <div class="container">
+            <div class="row text-center g-4 ">
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3 ">
+                                <i class="bi bi-hourglass-split"></i>
+
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Swift Printing
+                            </h3>
+                            <p class="card-text para1">
+                                Print with confidence. Print-f offers fast, reliable printing services with quick
+                                turnaround times, ensuring your prints are delivered on time, every time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3 ">
+                                <i class="bi bi-cash"></i>
+
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Affordability
+                            </h3>
+                            <p class="card-text para1">
+                                We believe everyone should be able to afford quality prints - that's why our prices are
+                                so reasonable. With Print-f, you get Quality-value printing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3 ">
+                                <i class="bi bi-people "></i>
+
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Easy Booking
+                            </h3>
+                            <p class="card-text para1">
+                                Printf supports easy booking just upload your files, and we'll take care of the rest.
+                                You don't have to worry about complicated registration or paperwork.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- learn section -->
+    <section class="p-5" id="story">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+                    <img class="img-fluid" src="{% static '../static/images/undraw_design_community_rcft.svg' %}"
+                        alt="">
+
+                </div>
+                <div class="col-md p-5">
+                    <h2 class="heads2">Our Story</h2>
+                    <p class="lead" para1>Printf was started by a group of B.Tech students from Amity University Patna
+                        who noticed the struggles of their peers when it came to printing out documents. They wanted to
+                        create an easier and more convenient way for students to get their printouts without the hassle
+                        of going out of their way. </p>
+                    <p class="lead" para1>
+                        With Printf, they are able to access a range of printers and have documents printed in just a
+                        few clicks with no need for physical contact. Printf is revolutionizing printing services,
+                        making it easy and hassle-free for students to get their documents printed quickly and
+                        efficiently..</p>
+
+                    <a href="{% url 'i' %}" class="btn btn-dark mt-3"><i class="bi bi-chevron-right"> Know More </i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- new section -->
+
+    <section class="p-5 bg-dark text-light">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+
+                <form action="{% url 'texts' %}" method="POST">
+                {% csrf_token %}
+
+                    <div class="col-md p-3">
+                        <h2 class="display-4 mb-4 font-monospace text-center textcc">Text to Hand Writing Converter</h2>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="12" name="texta"></textarea>
+                    </div>
+                    <div class="text-center">
+
+                        <input type="submit" class="btn btn-primary mt-2" value="Convert Now">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Now -->
+    <section class="p-5" id="register">
+        <div class="container ">
+            <div class="row g-4">
+                <div class="col-md-6  ">
+
+                    <h1 class="lead text-center high-head mb-4"> <strong class="text-dark">Printing is easier with <span
+                                class="text-warning">Printf</span> </strong>
+                    </h1>
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="fl">
+                            <div class="mb-3 col-6 px-2 ">
+                                <label for="" class="form-label">Name<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control red-border" id="name" placeholder="John Doe"
+                                    onkeyup="namef()" name="name">
+                                <span id="ename" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3 col-6 ">
+                                <label for="" class="form-label">Phone No<span class="text-danger">*</span></label>
+                                <input type="text" onkeyup="phonef()" class="form-control" id="phone"
+                                    placeholder="700-246-8181" name="phone">
+                                <span id="ephone" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                        <div class="fl">
+                            <div class="mb-3 col-6 px-2  ">
+                                <label for="" class="form-label ">No of Copies<span class="text-danger">*</span></label>
+                                <input type="number" onkeyup="copyf(),pdetails()" class="form-control red-border"
+                                    id="copy" placeholder="1" name="copy">
+                                <span id="ecopy" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3  ">
+                                <label for="" class="form-label">Print till Page No<span class="text-danger">*</span></label>
+                                <input type="number" class="form-control red-border" id="limit" placeholder="5"
+                                    onkeyup="limitf(),pdetails()" name="limit">
+                                <span id="elimit" class="text-danger"></span>
+
+                            </div>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" >Complete Address<span class="text-danger">*</span></label>
+                            <input type="text" onkeyup="addf()" class="form-control " id="add"
+                                placeholder="Amity University Patna Room 204" name="add">
+                            <span id="eaddress" class="text-danger"></span>
+                        </div>
+                        <div class="fl">
+                            <div class="mb-3 col-6 px-2">
+                                <label for="" class="form-label">Delivery Mode<span class="text-danger">*</span></label>
+
+                                <select class="form-select" id="select" aria-label="Default select example"
+                                    onclick="pdetails()" name="mode">
+                                    <option selected value="2">Urgent</option>
+                                    <option value="1">Within an hour</option>
+                                    <option value="1">Tomorrow</option>
+
+                                </select>
+                                <span id="etime" class="red"></span>
+                            </div>
+                            <div class="mb-3 col-6 ">
+                                <label for="formFile" class="form-label">Choose File<span class="text-danger">*</span></label>
+                                <input class="form-control" type="file" id="formFile" name="file" required>
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="mb-3 col-4 ">
+                            <span class="hid lead" id="det">Total Cost - </span> <span id="total"
+                                class="text-danger col-6 px-2 mb-3 lead"></span>
+
+
+                        </div>
+                        <div class="mb-3">
+                            <input type="submit" onclick="return formvalidation()" value="Submit"
+                                class="btn btn-primary m-auto" id="butt">
+                        </div>
+
+                    </form>
+
+
+                    <script>
+                        function disableButton() {
+                            // Get a reference to the button
+                            var button = document.getElementById("butt");
+
+                            // Disable the button
+                            button.value = "dddd";
+
+                            // Set a timeout to re-enable the button after 5 seconds
+                            setTimeout(function () {
+                                button.disabled = false;
+                            }, 5000);
+                        }
+                        function sendMail(event) {
+
+
+                            var params = {
+                                form_name: document.getElementById('name').value,
+                                form_phone: document.getElementById('phone').value,
+                                form_no_of_copy: document.getElementById('copy').value,
+                                form_limit_page: document.getElementById('limit').value,
+                                form_address: document.getElementById('add').value,
+                                form_time_delivery: document.getElementById('select').value,
+
+                                // form_file : document.getElementById('formFile').value,
+
+                            }
+
+
+                            console.log("done")
+                            emailjs.send('service_do5k0bb', 'template_bvndm8s', params)
+
+                                .then(function (response) {
+                                    console.log('SUCCESS!', response.status, response.text);
+                                }, function (error) {
+                                    console.log('FAILED...', error);
+                                });
+
+                        }
+                        function pdetails() {
+                            var getpage = document.getElementById('limit').value
+                            var dtime = document.getElementById('select').value
+                            var price = document.getElementById('total')
+                            var details = document.getElementById('det')
+                            var copy = document.getElementById('copy').value
+
+                            details.style.visibility = "visible"
+
+                            price.innerHTML = getpage * dtime * copy + 10
+                        }
+
+
+                    </script>
+
+
+                </div>
+                <div class="col-md-6 bg-primary round text-white ">
+                    <h1 class="lead text-center high-head mt-4 fw-bold">Charges</h1>
+                    <p class="lead para2 mx-3 mt-4 ">We charges money on the basis of Delivery Time. If you need
+                        print-out within 15 minute then it will cost 2₹ per page and in rest cases we charges 1₹ per page.The delivery charge per order is Rs. 10₹ </p>
+                    <p class="lead para2 mx-3">At the moment, we are solely providing our services to Amity University
+                        Patna. Should you desire to obtain printouts tomorrow, we will graciously print the first five
+                        pages free of charge.</p>
+                    <p class="lead para2 mx-3">At our service, we provide only black and white printouts. In the event
+                        of a late delivery, we will refund your money. Customer satisfaction is our top priority, and we
+                        strive to provide the highest quality service possible. </p>
+                    <p class="lead para2 mx-3">By clicking on submit button you are agreeing to the Terms and
+                        Conditions.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequenlty Asked Question</h2>
+            <div class="accordion accordion-flush" id="questions">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne">
+                            What do you mean by print till page no ?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#questions">
+                        <div class="accordion-body">You have uploaded a document in our portal, which may consist of 10
+                            pages. If you only need a printout of the first three pages, please indicate '3' and we will
+                            take care of the rest. If you require a printout of all the pages, please indicate the total
+                            number of pages, for example, '10'.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Is it possible to pay using Cash on Delivery?
+
+
+
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#questions">
+                        <div class="accordion-body">Currently, the cash on delivery mode is unavailable. However, in the
+                            future, students will be able to get their printouts using the COD method. We apologize for
+                            any inconvenience caused and appreciate your understanding</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree">
+                            Where I will get my printed Docs?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#questions">
+                        <div class="accordion-body">We will deliver your printout to your preferred location.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5 bg-primary">
+        <div class="container">
+            <h2 class="text-center text-white">Testimonial</h2>
+            <p class="lead text-center para1 text-white mb-5">What People Say About Us</p>
+            <div class="row g-4 ">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img class="img-fluid rounded-circle mb-3 pika" src="/undraw_printing_invoices_-5-r4r.svg"
+                                alt="" srcset="">
+                            <h3 class="card-title mb-2 heads">Priyanshu Singh , AUP</h3>
+                            <p class="para3 lead card-text">
+                                Print F offers affordable, high-quality printing services with eco-friendly materials
+                                and easy online ordering. Recommended!
+
+                            </p>
+                            <a href="{% url 'p' %}"><i class="fa-brands fa-instagram text-dark mx-1 ic"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img class="img-fluid rounded-circle mb-3 pika" src="/undraw_printing_invoices_-5-r4r.svg"
+                                alt="" srcset="">
+                            <h3 class="card-title mb-2 heads">Kunal Bhardwaj , AUP</h3>
+                            <p class="lead card-text para3">
+                                Print F offers affordable, high-quality printing services with eco-friendly materials
+                                and an easy online ordering system.
+
+                            </p>
+                            <a href="{% url 'k' %}"><i class="fa-brands fa-instagram text-dark mx-1 ic"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img class="img-fluid rounded-circle mb-3 pika" src="/undraw_printing_invoices_-5-r4r.svg"
+                                alt="" srcset="">
+                            <h3 class="card-title mb-2 heads">Riya Kumari , AUP</h3>
+                            <p class=" card-text lead para3">
+                                Print F's affordable pricing, and wide range of printing options make them a standout
+                                provider in the industry
+
+                            </p>
+                            <a href="{% url 'r' %}"><i class="fa-brands fa-instagram text-dark mx-1 ic"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img class="img-fluid rounded-circle mb-3 pika" src="/undraw_printing_invoices_-5-r4r.svg"
+                                alt="" srcset="">
+                            <h3 class="card-title heads ">Anuska Singh , AUP</h3>
+                            <h5 class="lead"></h5>
+                            <p class=" card-text lead para3">
+                                Print F is a great printing service provider that offers high-quality prints, affordable
+                                prices, and excellent customer service.
+
+                            </p>
+                            <a href="{% url 'a' %}"><i class="fa-brands fa-instagram text-dark mx-1 ic"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- contact -->
+    <section class="p-5" id="contact">
+        <div class="container">
+            <div class="row g-4 ">
+                <div class="col-md">
+                    <h2 class="text-center mb-4">Contact US</h2>
+                    <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Location:</span> Kendriya Vidyalaya Bailey Road
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Phone No:</span> +91 700-246-8181
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Email:</span> officials.ankitsingh@gmail.com
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">College</span> Amity University patna
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+
+                    <iframe class="row " zoom="23" id="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.041568428844!2d85.09141801401655!3d25.60353492138003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57ed27aa2d45%3A0x4f680910244fd292!2sKendriya%20Vidyalaya!5e0!3m2!1sen!2sin!4v1676718289504!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <p class="lead text-sm text1">
+                Copyright &copy 2023 | All right Reserved |
+            </p>
+            <a href="" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+        </div>
+    </footer> -->
+    <!-- FOOTER -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container foot">
+            <a href="{% url 'f' %}"><i class="fa-brands fa-facebook ic"></i></a>
+            <a href="{% url 'i' %}"><i class="fa-brands fa-instagram ic"></i></a>
+            <a href="{% url 'l' %}"><i class="fa-brands fa-linkedin ic"></i></a>
+            <a href="{% url 't' %}"><i class="fa-brands fa-twitter ic"></i></a>
+            <p class="lead text-sm text1">
+                Copyright &copy 2023 | Printf | All right Reserved | Designed By <a href="" class="text-white">Ankit
+                    Singh</a> |
+            </p>
+            <a class="text-white px-1" href="/privacy_policy/" style="text-decoration: none;">Privacy Policy</a>
+            <a class="text-white px-1" href="/terms_and_conditon/">Terms and Condition</a>
+            <a class="text-white px-1" href="/disclaimer">Disclaimer</a>
+            <a class="text-white px-1" href="/shipping_and_delivery_policy">Shipping & Delivery Policy</a>
+            <a class="text-white px-1" href="/cancellation_and_refund_policy">Cancellation and Refund Policy</a>
+            <a class="text-white px-1" href="/contact">Contact Us</a>
+
+
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        var name_error = document.getElementById('ename')
+        var phone_error = document.getElementById('ephone')
+        var copy_error = document.getElementById('ecopy')
+        var limit_error = document.getElementById('elimit')
+        var address_error = document.getElementById('eaddress')
+        var file_error = document.getElementById('efile')
+        var time_error = document.getElementById('etime')
+
+        function namef() {
+            var getname = document.getElementById('name').value
+            if (getname.length == 0) {
+                name_error.innerHTML = "Required"
+                return false
+            }
+            else {
+                name_error.innerHTML = ""
+                return true
+            }
+        }
+        function phonef() {
+            var getphone = document.getElementById('phone').value
+            if (getphone.length == 0) {
+                phone_error.innerHTML = "Required"
+                return false
+            }
+            if (getphone.length != 10) {
+                phone_error.innerHTML = "Please enter a valid 10 digit Number"
+
+
+
+
+            }
+            else {
+
+                phone_error.innerHTML = ""
+                return true
+            }
+
+        }
+
+        function copyf() {
+            var getcopy = document.getElementById('copy').value
+
+            if (getcopy.length == 0) {
+                copy_error.innerHTML = "Required"
+                return true
+            }
+            if (getcopy == 0) {
+                copy_error.innerHTML = "This field can't be zero"
+                return true
+            }
+
+            else {
+                copy_error.innerHTML = ""
+                return true
+            }
+        }
+
+        function limitf() {
+            var getlimit = document.getElementById('limit').value
+            if (getlimit.length == 0) {
+                limit_error.innerHTML = "Required"
+                return false
+            }
+            if (getlimit == 0) {
+                limit_error.innerHTML = "This field can't be zero"
+                return false
+            }
+            else {
+                limit_error.innerHTML = ""
+                return true
+            }
+        }
+
+        function filef() {
+            var getfile = document.getElementById('formFile').value
+            if (getfile.length == 0) {
+                file_error.innerHTML = "Required"
+                return false
+            }
+            else {
+                file_error.innerHTML = "formFile"
+            }
+        }
+        function addf() {
+            var getfiles = document.getElementById('add').value
+            if (getfiles.length == 0) {
+                address_error.innerHTML = "Required"
+                return false
+            }
+            else {
+                address_error.innerHTML = ""
+                return true
+            }
+        }
+
+
+
+
+        function formvalidation() {
+            if (!namef() || !phonef() || !copyf() || !limitf() || !addf())
+                return false
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
