@@ -1,0 +1,2 @@
+celery -A Website worker --pool=solo -l info
+Selenium code
